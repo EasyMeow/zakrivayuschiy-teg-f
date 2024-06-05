@@ -143,8 +143,8 @@
 .article-label {
   position: absolute;
   z-index: 1;
-  top: 25px;
-  right: 25px;
+  top: 20px;
+  right: 10px;
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
   text-transform: uppercase;
@@ -261,6 +261,16 @@
 .like-icon {
   width: 39px;
   height: 36px;
+}
+
+.card__icon-button:focus-visible .like-icon {
+  border: solid var(--main-color) 2px;
+  height: 38px;
+  transition: 0.3s ease;
+}
+
+.card__icon-button:focus .like-icon {
+  outline: none;
 }
 
 .like-icon .main-body {
@@ -437,6 +447,7 @@
 @media (width <= 375px) {
   .header {
     max-width: 375px;
+    /* max-height: 327px; */
   }
 
   .header-poster {
@@ -456,5 +467,9 @@
   .floppy {
     width: 28px;
     margin-bottom: 8px;
+  } 
+
+  .popup[open] {
+    padding: 30px 40px 30px 40px;
   }
 }
