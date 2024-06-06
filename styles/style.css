@@ -143,8 +143,8 @@
 .article-label {
   position: absolute;
   z-index: 1;
-  top: 20px;
-  right: 10px;
+  top: 25px;
+  right: 25px;
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
   text-transform: uppercase;
@@ -230,6 +230,12 @@
 .button:focus-visible {
   outline: none;
   box-shadow: var(--main-color) 2px 2px;
+}
+
+.button:focus-visible::before {
+  outline: none;
+  box-shadow: var(--main-color) 2px 2px;
+  transform: translate(0%);
 }
 
 .button::before {
@@ -456,6 +462,15 @@
 
   .article {
     max-width: 375px;
+  }
+
+  .article-label {
+    top: 20px;
+    right: 10px;
+  }
+
+  .popup__text {
+    min-width: 198px;
   }
 
   .button-save {
